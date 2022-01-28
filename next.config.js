@@ -15,7 +15,6 @@ const plugins = [
   //   },
   // }],
   [
-    withTM,
     {
       webpack5: true,
       reactStrictMode: true,
