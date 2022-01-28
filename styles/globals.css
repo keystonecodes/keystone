@@ -1,16 +1,103 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 dark:text-white;
+  }
+  .dark {
+    background: rgb(153,69,255);
+background: linear-gradient(90deg, rgba(153,69,255,1) 0%, rgba(20,241,149,1) 25%, rgba(29,36,52,1) 50%);
+  }
+
+  .light {
+    background: rgb(218,189,254);
+background: linear-gradient(90deg, rgba(218,189,254,1) 0%, rgba(146,247,205,1) 25%, rgba(209,213,219,1) 50%);
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.footer {
+  @apply bottom-0 bg-slate-100 dark:bg-gray-900
 }
 
-* {
-  box-sizing: border-box;
+.footer-text {
+  @apply mx-auto px-4 py-4 flex justify-center items-center
 }
+
+.header {
+  @apply mx-auto px-4 pb-4 pt-[70px] sm:py-4 flex items-center
+}
+
+.header-container {
+  @apply sticky top-0 z-50 bg-slate-100 dark:bg-gray-900
+}
+
+.hamburger-menu {
+  @apply sm:hidden absolute top-[-20px] left-[20px] p-3 mt-9 hover:bg-[#9945FF] dark:hover:bg-[#14f195] rounded lg:hidden ml-auto hover:text-white outline-none
+}
+
+.home-header-items-container {
+  @apply sm:inline-flex sm:flex-row sm:ml-auto sm:w-auto w-full items-center justify-center flex sm:h-auto space-x-2 sm:space-x-0
+}
+
+.header-button {
+  @apply sm:inline-flex mt-[11px] sm:mt-0 sm:font-bold sm:text-xl mx-[1px] sm:mx-1 px-[3px] sm:px-2 py-1 rounded font-bold items-center justify-center hover:bg-[#9945FF] dark:hover:bg-[#14f195] hover:text-gray-900 dark:hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+}
+
+.content-container {
+  @apply flex flex-grow w-full justify-center pt-20 bg-slate-100 dark:bg-gray-900
+}
+
+.section-container {
+  @apply my-10 mx-10 md:mx-40 lg:mx-60 py-8 light dark:dark rounded-xl shadow-lg shadow-[#9945FF] dark:shadow-[#14F195] border-4 border-gray-900 dark:border-gray-300 overflow-hidden
+}
+
+.section-header {
+  @apply flex font-bold text-2xl justify-center
+}
+
+.section-text {
+  @apply text-center px-12 pt-4 sm:px-20
+}
+
+.dev-container {
+  @apply flex flex-col justify-center items-center lg:pt-10 space-y-0 xl:flex-row xl:space-x-60
+}
+
+.dev-image-container {
+  @apply flex flex-col justify-center items-center my-10 xl:my-0
+}
+
+.dev-image {
+  @apply relative w-[200px] h-[200px] border-4 border-gray-900 dark:border-gray-300 rounded-full overflow-hidden shadow-lg shadow-gray-900 dark:shadow-gray-300
+}
+
+.dev-name {
+  @apply hidden lg:inline text-xl mt-8 font-bold px-3 py-2 rounded
+}
+
+.blockchain-link {
+  @apply sm:group-hover:border-2 rounded-lg border-gray-900 dark:border-gray-300
+}
+
+.blockchain-text {
+  @apply sm:inline-flex sm:text-xl px-3 py-2 rounded font-bold items-center justify-center
+}
+
+.trans-button {
+  @apply transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:skew-y-[-3deg] duration-300
+}
+
+.group-trans-button {
+  @apply transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 group-hover:skew-y-[-3deg] duration-300
+}
+
+.project-button {
+  @apply sm:inline-flex sm:font-bold sm:text-xl px-3 py-2 rounded font-bold items-center justify-center trans-button hover:bg-[#9945ff] dark:hover:bg-[#14f195] hover:text-white
+}
+
+.github-button {
+  @apply sm:inline-flex sm:font-bold sm:text-xl px-2 pt-2 pb-1 sm:pb-2 rounded font-bold items-center justify-center hover:bg-[#9945FF] dark:hover:bg-[#14f195] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+}
+
