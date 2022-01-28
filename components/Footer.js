@@ -2,7 +2,7 @@ function Footer() {
     return (
       <footer className="footer">
         <div className="footer-text">
-            <h1>© 2021 Keystone, Inc.</h1>
+            <h1>© 2022 Keystone Codes</h1>
         </div>
       </footer>
     );
