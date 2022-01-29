@@ -107,7 +107,7 @@ function Homepage() {
               tools for the community!
             </p>
             <div className="mt-4 border-2 rounded-lg border-gray-900 dark:border-gray-300">
-              <Link href="/gallery">
+              <Link href="https://2nft.keystone.codes/">
                 <a className="project-button">2NFT</a>
               </Link>
             </div>
